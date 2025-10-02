@@ -3,18 +3,42 @@
 
 int main(int argc, char *argv[])
 {
-    int num;
-    int i;
-    int sum = 0;
+    int first;
+    int second;
+    char cal;
+    int result;
     
-    printf("input a number: ");  
-    scanf("%d", &num);
+    printf("enter the calculation: ");  
+    scanf("%d %c %d", &first, &cal, &second);
     
+    if(cal == '+')   
+      result = first + second;
+    else if(cal == '-')
+      result = first - second;
+    else if(cal == '*')
+      result = first * second;
+    else if(cal == '/')
+      result = first / second;
+    else 
+      printf("Wrong Operation.\n");
     
-    for(i=0; i<=num; i++)
-      sum = sum + i;
-    
-    printf("The result is %d\n", sum); 
+    printf(" = %d\n", result); 
+  
+  
+  /*  switch문으로 하는 경우 이용하면 되는 코드 
+  switch(op)
+  {
+            case '+':              작은 따옴표가 있어야 된다. 
+                 result = a+b;
+                 break;
+            case:
+                 defalut:  
+            }
+  
+  
+  */
+  
+  
   
   system("PAUSE");	
   return 0;
