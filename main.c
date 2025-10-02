@@ -3,15 +3,18 @@
 
 int main(int argc, char *argv[])
 {
-    int number;
+    int num;
+    int i;
+    int sum = 0;
     
-    printf("정수 하나를 입력하시오: ");  
-    scanf("%d", &number);
+    printf("input a number: ");  
+    scanf("%d", &num);
     
-    if(number >= 0) 
-      printf("절댓값은 %d입니다.\n", number);
-    else
-      printf("절댓값은 %d입니다.\n", -number); 
+    
+    for(i=0; i<=num; i++)
+      sum = sum + i;
+    
+    printf("The result is %d\n", sum); 
   
   system("PAUSE");	
   return 0;
